@@ -1,0 +1,38 @@
+body {
+  background-color: powderblue;
+}
+h1 {
+  color: blue;
+}
+
+#outer-cont {
+  display: flex;
+  justify-content: space-around;
+}
+
+#refresh {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width : 130%;
+}
+
+#add-score {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#add-score button {
+  float: right;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+table {
+  width: 130%;
+}
+
+
