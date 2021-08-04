@@ -24,7 +24,9 @@ The focus of this feature is only the structure
 ## Getting started
 
 - Run this command in your OS terminal: `https://github.com/kimothokamau/leaderboard-app-api` to get a local copy of the project.
-- Navigate to the `src` folder in the project directory and open the index.html file in your favorite browser. Preferably chrome
+- Run `npm install` to install required node modules
+- Run  `npm run build`
+- Open the `index.html` file found in the /dist folder
 - Confirm that you can see a list names with accompanying scores, and input fields to enter name and score and submit
 
 
