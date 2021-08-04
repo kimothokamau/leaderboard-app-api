@@ -5,6 +5,7 @@
 body {
   background-color: powderblue;
 }
+
 h1 {
   color: rgb(255, 0, 191);
   font-style: normal;
@@ -20,10 +21,8 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  width : 130%;
+  width: 130%;
 }
-
-
 
 #add-score {
   display: flex;
@@ -39,7 +38,9 @@ h1 {
   align-self: flex-end;
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid black;
 }
 
@@ -50,5 +51,3 @@ td {
 table {
   width: 130%;
 }
-
-
