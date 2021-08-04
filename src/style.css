@@ -1,8 +1,14 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
 body {
   background-color: powderblue;
 }
 h1 {
-  color: blue;
+  color: rgb(255, 0, 191);
+  font-style: normal;
+  margin-left: 6em;
 }
 
 #outer-cont {
@@ -17,18 +23,28 @@ h1 {
   width : 130%;
 }
 
+
+
 #add-score {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+}
+
+#add-score input {
+  margin-bottom: 1em;
 }
 
 #add-score button {
-  float: right;
+  width: 4em;
+  align-self: flex-end;
 }
 
 table, th, td {
   border: 1px solid black;
+}
+
+td {
+  text-align: center;
 }
 
 table {
