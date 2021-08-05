@@ -10,6 +10,9 @@ The focus of this feature is only the structure
 - Use ES6 modules to write modular JavaScript.
 - Use webpack to bundle JavaScript.
 
+## Demo
+[Live link](https://kimothokamau.github.io/leaderboard-app-api/)
+
 
 ## Built With
 
