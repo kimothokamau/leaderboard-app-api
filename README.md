@@ -11,7 +11,7 @@ The focus of this feature is only the structure
 - Use webpack to bundle JavaScript.
 
 ## Demo
-[Live link](https://kimothokamau.github.io/leaderboard-app-api/)
+[https://kimothokamau.github.io/leaderboard-app-api/](https://kimothokamau.github.io/leaderboard-app-api/)
 
 
 ## Built With
