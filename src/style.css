@@ -2,12 +2,13 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-body {
-  background-color: powderblue;
-}
+
+  body {
+    background: linear-gradient(45deg,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+  }
 
 h1 {
-  color: rgb(255, 0, 191);
+  color: rgb(46, 40, 44);
   font-style: normal;
   margin-left: 6em;
 }
