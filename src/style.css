@@ -3,37 +3,38 @@
 }
 
 body {
-  background-color: powderblue;
+  /* background: linear-gradient(45deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); */
+  background: linear-gradient(135deg, #c9de96 0%, #8ab66b 44%, #398235 100%);
 }
 
 h1 {
-  color: rgb(255, 0, 191);
+  color: rgb(46, 40, 44);
   font-style: normal;
   margin-left: 6em;
 }
 
-#outer-cont {
+.outer-cont {
   display: flex;
   justify-content: space-around;
 }
 
-#refresh {
+.refresh {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   width: 130%;
 }
 
-#add-score {
+.add-score {
   display: flex;
   flex-direction: column;
 }
 
-#add-score input {
+.add-score input {
   margin-bottom: 1em;
 }
 
-#add-score button {
+.add-score button {
   width: 4em;
   align-self: flex-end;
 }
@@ -50,4 +51,8 @@ td {
 
 table {
   width: 130%;
+}
+
+.t-header {
+  font-weight: bolder;
 }

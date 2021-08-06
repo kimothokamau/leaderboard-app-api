@@ -14,67 +14,27 @@
   <section>
     <h1>Leaderboard</h1>
   </section>
-  <section id="outer-cont">
+  <section class="outer-cont">
     <div>
-      <div id="refresh">
+      <div class="refresh">
         <h2>Recent Scores</h2>
-        <button type="button">Refresh</button>
+        <button type="button" class="refresh-btn">Refresh</button>
       </div>
-      <table>
-        <tr>
+      <table class="player-scores">
+        <!-- <tr>
           <th>Name</th>
           <th>Score</th>
-        </tr>
-        <tr>
-          <td>
-            Dressel
-          </td>
-          <td>
-            5
-          </td>
-        </tr>
-        <tr>
-          <td>
-            McKeon
-          </td>
-          <td>
-            4
-          </td>
-        </tr>
-        <tr>
-          <td>
-            McKeown
-          </td>
-          <td>
-            3
-          </td>
-        </tr>
-        <tr>
-          <td>
-            S.An
-          </td>
-          <td>
-            3
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Ledecky
-          </td>
-          <td>
-            2
-          </td>
-        </tr>
+        </tr> -->
       </table>
 
     </div>
-    
-    <div id="add-score">
+
+    <form class="add-score">
       <h2>Add your score</h2>
-      <input type="text" placeholder="Your name">
-      <input type="text" placeholder="Your score">
+      <input type="text" placeholder="Your name" class="playername">
+      <input type="text" placeholder="Your score" class="playerscore">
       <button type="submit">Submit</button>
-    </div>
+    </form>
   </section> 
 </body>
 </html>
