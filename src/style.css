@@ -3,31 +3,98 @@
 }
 
 body {
-  /* background: linear-gradient(45deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); */
-  background: linear-gradient(135deg, #c9de96 0%, #8ab66b 44%, #398235 100%);
+  background-color: #8ab66b;
+  margin: 0;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 5% 80% 5%;
+  height: 100%;
+}
+
+main {
+  display: grid;
+  grid-gap: 1em;
+  grid-column: 2/3;
+  grid-template-rows: 10% 5% 70%;
+}
+
+.leader-board {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+
+.refresh {
+  display: flex;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: #8ab66b;
+    margin: 0;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 10% 80% 10%;
+    height: 100%;
+  }
+
+  main {
+    display: grid;
+    grid-gap: 1em;
+    grid-column: 2/3;
+    grid-template-rows: 10% 5% 70%;
+  }
+
+  .leader-board {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+
+  .outer-cont {
+    display: grid;
+    grid-gap: 1em;
+    grid-row: 3/4;
+    grid-column: 1/2;
+    grid-template-rows: 15% 85%;
+    grid-template-columns: 40% 20% 30%;
+  }
+
+  .refresh {
+    display: flex;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+  }
+
+  .add-score {
+    display: flex;
+    flex-direction: column;
+    grid-row: 1/2;
+    grid-column: 3/4;
+  }
 }
 
 h1 {
   color: rgb(46, 40, 44);
   font-style: normal;
-  margin-left: 6em;
+  font-weight: 600;
+  font-size: 50px;
 }
 
-.outer-cont {
-  display: flex;
-  justify-content: space-around;
+.refresh > h2 {
+  font-size: 30px;
+  font-weight: 600;
 }
 
-.refresh {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  width: 130%;
-}
-
-.add-score {
-  display: flex;
-  flex-direction: column;
+.add-score > h2 {
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .add-score input {
@@ -35,7 +102,6 @@ h1 {
 }
 
 .add-score button {
-  width: 4em;
   align-self: flex-end;
 }
 
@@ -50,7 +116,7 @@ td {
 }
 
 table {
-  width: 130%;
+  width: 100%;
 }
 
 .t-header {

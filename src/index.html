@@ -5,36 +5,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leaderboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap" crossorigin="anonymous" rel="stylesheet">
 </head>
 <body>
-  <section>
-    <h1>Leaderboard</h1>
-  </section>
-  <section class="outer-cont">
-    <div>
-      <div class="refresh">
-        <h2>Recent Scores</h2>
-        <button type="button" class="refresh-btn">Refresh</button>
+  <main>
+    <section>
+      <h1 class="leader-board">Leaderboard</h1>
+    </section>
+    <section class="outer-cont">
+      <div>
+        <div class="refresh">
+          <h2>Recent Scores</h2>
+          <button type="button" class="refresh-btn">Refresh</button>
+        </div>
+        <table class="player-scores">
+        </table>
+  
       </div>
-      <table class="player-scores">
-        <!-- <tr>
-          <th>Name</th>
-          <th>Score</th>
-        </tr> -->
-      </table>
-
-    </div>
-
-    <form class="add-score">
-      <h2>Add your score</h2>
-      <input type="text" placeholder="Your name" class="playername">
-      <input type="text" placeholder="Your score" class="playerscore">
-      <button type="submit">Submit</button>
-    </form>
-  </section> 
+  
+      <form class="add-score">
+        <h2>Add your score</h2>
+        <input type="text" placeholder="Your name" class="playername">
+        <input type="text" placeholder="Your score" class="playerscore">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </section> 
+  </main>
+  
 </body>
 </html>
