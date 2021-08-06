@@ -52,3 +52,7 @@ td {
 table {
   width: 130%;
 }
+
+.t-header {
+  font-weight: bolder;
+}

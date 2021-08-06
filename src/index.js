@@ -15,10 +15,9 @@ form.addEventListener('submit', (event) => {
   form.reset();
 });
 
-
-
 const theaders = () => {
   const theader = document.createElement('tr');
+  theader.classList.add('t-header');
   const theaderPlayer = document.createElement('td');
   theaderPlayer.innerHTML = 'Player name';
   const theaderScore = document.createElement('td');
@@ -27,12 +26,12 @@ const theaders = () => {
   theader.appendChild(theaderScore);
   displayScores.appendChild(theader);
   return displayScores;
-}
+};
 
 const loadScores = () => {
-  theaders();
   getScores()
     .then((footballer) => {
+      theaders();
       footballer.result.forEach((playerscore) => {
         const scoreEntryElem = document.createElement('tr');
         const playerNameElem = document.createElement('td');
@@ -47,10 +46,10 @@ const loadScores = () => {
 };
 
 refreshBtn.addEventListener('click', () => {
-  theaders();
   getScores()
     .then((playerscore) => {
       displayScores.innerHTML = '';
+      theaders();
       playerscore.result.forEach((playerscore) => {
         const scoreEntryElem = document.createElement('tr');
         const playerNameElem = document.createElement('td');
