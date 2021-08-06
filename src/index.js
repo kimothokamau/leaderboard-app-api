@@ -35,9 +35,9 @@ refreshBtn.addEventListener('click', () => {
 const loadScores = () => {
   const theader = document.createElement('tr');
   const theaderPlayer = document.createElement('td');
-  theaderPlayer.innerHTML = 'Player name'
+  theaderPlayer.innerHTML = 'Player name';
   const theaderScore = document.createElement('td');
-  theaderScore.innerHTML = 'Score'
+  theaderScore.innerHTML = 'Score';
   theader.appendChild(theaderPlayer);
   theader.appendChild(theaderScore);
   displayScores.appendChild(theader);
@@ -52,9 +52,9 @@ const loadScores = () => {
         playerScoreElem.innerHTML = `${playerscore.score}`;
         scoreEntryElem.appendChild(playerScoreElem);
         displayScores.appendChild(scoreEntryElem);
-      })
-    })
-}
+      });
+    });
+};
 
 gameID('foorball');
 window.onload(loadScores());
