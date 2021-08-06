@@ -15,7 +15,39 @@ form.addEventListener('submit', (event) => {
   form.reset();
 });
 
+
+
+const theaders = () => {
+  const theader = document.createElement('tr');
+  const theaderPlayer = document.createElement('td');
+  theaderPlayer.innerHTML = 'Player name';
+  const theaderScore = document.createElement('td');
+  theaderScore.innerHTML = 'Score';
+  theader.appendChild(theaderPlayer);
+  theader.appendChild(theaderScore);
+  displayScores.appendChild(theader);
+  return displayScores;
+}
+
+const loadScores = () => {
+  theaders();
+  getScores()
+    .then((footballer) => {
+      footballer.result.forEach((playerscore) => {
+        const scoreEntryElem = document.createElement('tr');
+        const playerNameElem = document.createElement('td');
+        playerNameElem.innerHTML = `${playerscore.user}`;
+        scoreEntryElem.appendChild(playerNameElem);
+        const playerScoreElem = document.createElement('td');
+        playerScoreElem.innerHTML = `${playerscore.score}`;
+        scoreEntryElem.appendChild(playerScoreElem);
+        displayScores.appendChild(scoreEntryElem);
+      });
+    });
+};
+
 refreshBtn.addEventListener('click', () => {
+  theaders();
   getScores()
     .then((playerscore) => {
       displayScores.innerHTML = '';
@@ -32,29 +64,5 @@ refreshBtn.addEventListener('click', () => {
     });
 });
 
-const loadScores = () => {
-  const theader = document.createElement('tr');
-  const theaderPlayer = document.createElement('td');
-  theaderPlayer.innerHTML = 'Player name';
-  const theaderScore = document.createElement('td');
-  theaderScore.innerHTML = 'Score';
-  theader.appendChild(theaderPlayer);
-  theader.appendChild(theaderScore);
-  displayScores.appendChild(theader);
-  getScores()
-    .then((footballer) => {
-      footballer.result.forEach((playerscore) => {
-        const scoreEntryElem = document.createElement('tr');
-        const playerNameElem = document.createElement('td');
-        playerNameElem.innerHTML = `${playerscore.user}`;
-        scoreEntryElem.appendChild(playerNameElem);
-        const playerScoreElem = document.createElement('td');
-        playerScoreElem.innerHTML = `${playerscore.score}`;
-        scoreEntryElem.appendChild(playerScoreElem);
-        displayScores.appendChild(scoreEntryElem);
-      });
-    });
-};
-
 gameID('foorball');
-window.onload(loadScores());
+window.onload = loadScores();

@@ -19,7 +19,7 @@ const gameID = async (title) => {
 };
 
 const postScores = async (playerName, playerScore) => {
-  const response = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/`, {
+  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
