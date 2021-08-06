@@ -1,5 +1,5 @@
 import './style.css';
-import { postScores, getScores } from './api-backend.js';
+import { postScores, getScores, gameID } from './api-backend.js';
 
 const displayScores = document.querySelector('.player-scores');
 const form = document.querySelector('.add-score');
@@ -18,6 +18,7 @@ form.addEventListener('submit', (event) => {
 refreshBtn.addEventListener('click', () => {
   getScores()
     .then((playerscore) => {
+      displayScores.innerHTML = '';
       playerscore.result.forEach((playerscore) => {
         const scoreEntryElem = document.createElement('tr');
         const playerNameElem = document.createElement('td');
@@ -30,3 +31,5 @@ refreshBtn.addEventListener('click', () => {
       });
     });
 });
+
+gameID('foorball');

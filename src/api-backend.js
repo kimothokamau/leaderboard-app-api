@@ -1,5 +1,26 @@
+const gameID = async (title) => {
+  const result = await fetch(
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: title,
+      }),
+    },
+  );
+
+  const data = await result.json();
+  gameID = data.result.split(' ')[3];
+  return gameID;
+};
+
+
+
 const postScores = async (playerName, playerScore) => {
-  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/zeWhEaKsT4ZEAaPGExUD/scores/', {
+  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -15,9 +36,9 @@ const postScores = async (playerName, playerScore) => {
 };
 
 const getScores = async () => {
-  const refreshScores = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/zeWhEaKsT4ZEAaPGExUD/scores/');
+  const refreshScores = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameID}/scores/');
   const refreshScoresJson = refreshScores.json();
   return refreshScoresJson;
 };
 
-export { postScores, getScores };
+export { postScores, getScores, gameID};
